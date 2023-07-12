@@ -31,7 +31,8 @@ Function Invoke-ImmyApi {
             $params.method = $Method
         }
         if($Body) {
-            $params.body = $body
+            $params.body = $body | ConvertTo-Json -Compress
+            $params.contentType = 'application/json'
         }
     }
     Process{
