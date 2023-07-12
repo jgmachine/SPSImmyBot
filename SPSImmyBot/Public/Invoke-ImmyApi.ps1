@@ -32,7 +32,7 @@ Function Invoke-ImmyApi {
         }
         if($Body) {
             $params.body = $body | ConvertTo-Json -Compress
-            $parmas.contentType = 'application/json'
+            $params.contentType = 'application/json'
         }
     }
     Process{
